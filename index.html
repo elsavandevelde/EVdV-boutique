@@ -4,73 +4,486 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EVdV — Illustrations & affiches</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&display=swap');
-:root{--blue:#15508b;--navy:#173d68;--yellow:#f3bd32;--cream:#fffdf7;--ink:#173d68;--line:#d9e1e7}
-*{box-sizing:border-box} body{margin:0;background:var(--cream);color:var(--ink);font-family:Quicksand,Arial,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 28px}
-header{background:#fffdf9;border-bottom:2px solid var(--blue);position:sticky;top:0;z-index:5}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font:42px "Patrick Hand",cursive;letter-spacing:1px}
-.menu{display:flex;gap:34px;font-weight:600}.menu a{padding:8px 0}.menu a:first-child{border-bottom:4px solid var(--yellow)}
-.icons{display:flex;gap:18px;font-size:24px}.hero{padding:44px 0 28px}
-.hero-grid{display:grid;grid-template-columns:38% 62%;align-items:center;gap:22px}.eyebrow{font-size:13px;letter-spacing:3px;font-weight:700;margin-bottom:18px}
-h1,h2{font-family:"Patrick Hand",cursive;font-weight:400;line-height:.95;margin:0}h1{font-size:66px;max-width:440px}h2{font-size:43px}
-.hero p{font-size:17px;line-height:1.6;max-width:470px}.button{display:inline-block;background:var(--yellow);padding:14px 22px;border-radius:5px;font-weight:700;margin-top:12px;border:2px solid var(--yellow)}
-.hero-art{height:400px;overflow:hidden;border:3px solid var(--blue);transform:rotate(-.5deg);background:white}.hero-art img{width:100%;height:100%;object-fit:cover;object-position:center}
-.categories{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
-.cat{padding:25px;border-right:1px solid var(--line)}.cat:last-child{border:0}.cat b{display:block;font:25px "Patrick Hand";margin-bottom:5px}.cat span{font-size:14px}
-.products{padding:52px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.underline{height:4px;background:var(--yellow);width:190px;margin-top:8px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.card{min-width:0}.pic{aspect-ratio:4/5;background:#fff;border:2px solid var(--blue);overflow:hidden}.pic img{width:100%;height:100%;object-fit:cover}.card h3{font:24px "Patrick Hand";margin:11px 0 2px}.type{font-size:13px}.price{font-weight:700;margin-top:5px}
-.about{background:#edf4f6;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:50px 0}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about p{line-height:1.7}
-.news{padding:45px 0;display:flex;justify-content:space-between;gap:30px;align-items:center}.news p{margin:5px 0 0}.form{display:flex}.form input{padding:13px 16px;width:260px;border:2px solid var(--blue);background:white}.form button{border:2px solid var(--yellow);background:var(--yellow);padding:0 20px;font-weight:700}
-footer{border-top:2px solid var(--blue);padding:28px 0 45px;display:flex;justify-content:space-between;font-size:14px}
-@media(max-width:800px){.menu{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-art{height:300px}.grid{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:1fr}.cat{border-right:0;border-bottom:1px solid var(--line)}.news{display:block}.form{margin-top:20px}.form input{width:70%}h1{font-size:52px}}
+
+:root{
+  --blue:#15508b;
+  --navy:#173d68;
+  --yellow:#f3bd32;
+  --cream:#fffdf7;
+  --ink:#173d68;
+  --line:#d9e1e7
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Quicksand,Arial,sans-serif
+}
+
+a{
+  color:inherit;
+  text-decoration:none
+}
+
+.wrap{
+  max-width:1180px;
+  margin:auto;
+  padding:0 28px
+}
+
+header{
+  background:#fffdf9;
+  border-bottom:2px solid var(--blue);
+  position:sticky;
+  top:0;
+  z-index:5
+}
+
+.nav{
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.logo{
+  font:42px "Patrick Hand",cursive;
+  letter-spacing:1px
+}
+
+.menu{
+  display:flex;
+  gap:34px;
+  font-weight:600
+}
+
+.menu a{
+  padding:8px 0
+}
+
+.menu a:first-child{
+  border-bottom:4px solid var(--yellow)
+}
+
+.icons{
+  display:flex;
+  gap:18px;
+  font-size:24px
+}
+
+.hero{
+  padding:44px 0 28px
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:38% 62%;
+  align-items:center;
+  gap:22px
+}
+
+.eyebrow{
+  font-size:13px;
+  letter-spacing:3px;
+  font-weight:700;
+  margin-bottom:18px
+}
+
+h1,h2{
+  font-family:"Patrick Hand",cursive;
+  font-weight:400;
+  line-height:.95;
+  margin:0
+}
+
+h1{
+  font-size:66px;
+  max-width:440px
+}
+
+h2{
+  font-size:43px
+}
+
+.hero p{
+  font-size:17px;
+  line-height:1.6;
+  max-width:470px
+}
+
+.button{
+  display:inline-block;
+  background:var(--yellow);
+  padding:14px 22px;
+  border-radius:5px;
+  font-weight:700;
+  margin-top:12px;
+  border:2px solid var(--yellow)
+}
+
+.hero-art{
+  height:400px;
+  overflow:hidden;
+  border:3px solid var(--blue);
+  transform:rotate(-.5deg);
+  background:white
+}
+
+.hero-art img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center
+}
+
+.categories{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  text-align:center
+}
+
+.cat{
+  padding:25px;
+  border-right:1px solid var(--line)
+}
+
+.cat:last-child{
+  border:0
+}
+
+.cat b{
+  display:block;
+  font:25px "Patrick Hand";
+  margin-bottom:5px
+}
+
+.cat span{
+  font-size:14px
+}
+
+.products{
+  padding:52px 0
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:24px
+}
+
+.underline{
+  height:4px;
+  background:var(--yellow);
+  width:190px;
+  margin-top:8px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px
+}
+
+.card{
+  min-width:0
+}
+
+.pic{
+  aspect-ratio:4/5;
+  background:#fff;
+  border:2px solid var(--blue);
+  overflow:hidden
+}
+
+.pic img{
+  width:100%;
+  height:100%;
+  object-fit:cover
+}
+
+.card h3{
+  font:24px "Patrick Hand";
+  margin:11px 0 2px
+}
+
+.type{
+  font-size:13px
+}
+
+.price{
+  font-weight:700;
+  margin-top:5px
+}
+
+.about{
+  background:#edf4f6;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:50px 0
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center
+}
+
+.about p{
+  line-height:1.7
+}
+
+.news{
+  padding:45px 0;
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:center
+}
+
+.news p{
+  margin:5px 0 0
+}
+
+.form{
+  display:flex
+}
+
+.form input{
+  padding:13px 16px;
+  width:260px;
+  border:2px solid var(--blue);
+  background:white
+}
+
+.form button{
+  border:2px solid var(--yellow);
+  background:var(--yellow);
+  padding:0 20px;
+  font-weight:700
+}
+
+footer{
+  border-top:2px solid var(--blue);
+  padding:28px 0 45px;
+  display:flex;
+  justify-content:space-between;
+  font-size:14px
+}
+
+@media(max-width:800px){
+
+  .menu{
+    display:none
+  }
+
+  .hero-grid,
+  .about-grid{
+    grid-template-columns:1fr
+  }
+
+  .hero-art{
+    height:300px
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .categories{
+    grid-template-columns:1fr
+  }
+
+  .cat{
+    border-right:0;
+    border-bottom:1px solid var(--line)
+  }
+
+  .news{
+    display:block
+  }
+
+  .form{
+    margin-top:20px
+  }
+
+  .form input{
+    width:70%
+  }
+
+  h1{
+    font-size:52px
+  }
+}
 </style>
 </head>
+
 <body>
-<header><div class="wrap nav">
-  <div class="logo">EVdV</div>
-  <nav class="menu"><a href="#">Accueil</a><a href="#boutique">Boutique</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav>
-  <div class="icons"><span>⌕</span><span>♡</span><span>🛒</span></div>
-</div></header>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">EVdV</div>
+
+    <nav class="menu">
+      <a href="#">Accueil</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="icons">
+      <span>⌕</span>
+      <span>♡</span>
+      <span>🛒</span>
+    </div>
+  </div>
+</header>
 
 <main>
-<section class="hero"><div class="wrap hero-grid">
-  <div>
-    <div class="eyebrow">ILLUSTRATIONS & AFFICHES</div>
-    <h1>Des images qui racontent des lieux et des petits moments.</h1>
-    <p>Des dessins faits à la main, entre villes, voyages, mer et scènes du quotidien. À accrocher au mur ou à garder dans un coin de soi.</p>
-    <a class="button" href="#boutique">Voir la boutique →</a>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+
+    <div>
+      <div class="eyebrow">ILLUSTRATIONS & AFFICHES</div>
+
+      <h1>Des images qui racontent des lieux et des petits moments.</h1>
+
+      <p>
+        Des dessins faits à la main, entre villes, voyages, mer et scènes du quotidien.
+        À accrocher au mur ou à garder dans un coin de soi.
+      </p>
+
+      <a class="button" href="#boutique">Voir la boutique →</a>
+    </div>
+
+    <div class="hero-art">
+      <img src="essaouira-2.jpg" alt="Illustration EVdV">
+    </div>
+
   </div>
-  <div class="hero-art"><img src="images/essaouira-2.jpg" alt="Illustration EVdV"></div>
-</div></section>
+</section>
 
 <section class="categories">
-  <div class="cat"><b>Affiches</b><span>À partir de 10 € · imprimées avec soin</span></div>
-  <div class="cat"><b>Illustrations numériques</b><span>À partir de 10 € · fichiers à télécharger</span></div>
-  <div class="cat"><b>Créations originales</b><span>Des dessins signés EVdV</span></div>
+
+  <div class="cat">
+    <b>Affiches</b>
+    <span>À partir de 10 € · imprimées avec soin</span>
+  </div>
+
+  <div class="cat">
+    <b>Illustrations numériques</b>
+    <span>À partir de 10 € · fichiers à télécharger</span>
+  </div>
+
+  <div class="cat">
+    <b>Créations originales</b>
+    <span>Des dessins signés EVdV</span>
+  </div>
+
 </section>
 
 <section class="products wrap" id="boutique">
-  <div class="section-head"><div><div class="eyebrow">LA SÉLECTION EVdV</div><h2>Les coups de cœur</h2><div class="underline"></div></div><a href="#">Voir toute la boutique →</a></div>
+
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">LA SÉLECTION EVdV</div>
+      <h2>Les coups de cœur</h2>
+      <div class="underline"></div>
+    </div>
+
+    <a href="#">Voir toute la boutique →</a>
+  </div>
+
   <div class="grid">
-    <article class="card"><div class="pic"><img src="images/essaouira-2.jpg"></div><h3>Essaouira</h3><div class="type">Affiche · illustration</div><div class="price">20 €</div></article>
-    <article class="card"><div class="pic"><img src="images/mouette.jpg"></div><h3>Mouette-mouette</h3><div class="type">Affiche · illustration</div><div class="price">15 €</div></article>
-    <article class="card"><div class="pic"><img src="images/marrakech.jpg"></div><h3>Marrakech</h3><div class="type">Affiche · illustration</div><div class="price">25 €</div></article>
-    <article class="card"><div class="pic"><img src="images/piscine.jpg"></div><h3>Piscine</h3><div class="type">Affiche · illustration</div><div class="price">20 €</div></article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="essaouira-2.jpg" alt="Illustration Essaouira">
+      </div>
+      <h3>Essaouira</h3>
+      <div class="type">Affiche · illustration</div>
+      <div class="price">20 €</div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="mouette.jpg" alt="Illustration Mouette-mouette">
+      </div>
+      <h3>Mouette-mouette</h3>
+      <div class="type">Affiche · illustration</div>
+      <div class="price">15 €</div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="marrakech.jpg" alt="Illustration Marrakech">
+      </div>
+      <h3>Marrakech</h3>
+      <div class="type">Affiche · illustration</div>
+      <div class="price">25 €</div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="piscine.jpg" alt="Illustration Piscine">
+      </div>
+      <h3>Piscine</h3>
+      <div class="type">Affiche · illustration</div>
+      <div class="price">20 €</div>
+    </article>
+
   </div>
 </section>
 
-<section class="about" id="apropos"><div class="wrap about-grid">
-  <div><div class="eyebrow">À PROPOS</div><h2>Dessiner les endroits où l'on aime être.</h2></div>
-  <p>EVdV propose des illustrations sensibles et colorées, inspirées par les voyages, l'architecture, la mer et les détails qui donnent une âme aux lieux. Chaque dessin garde volontairement son trait vivant et sa petite part d'imperfection.</p>
-</div></section>
+<section class="about" id="apropos">
+
+  <div class="wrap about-grid">
+
+    <div>
+      <div class="eyebrow">À PROPOS</div>
+      <h2>Dessiner les endroits où l'on aime être.</h2>
+    </div>
+
+    <p>
+      EVdV propose des illustrations sensibles et colorées, inspirées par les voyages,
+      l'architecture, la mer et les détails qui donnent une âme aux lieux.
+      Chaque dessin garde volontairement son trait vivant et sa petite part d'imperfection.
+    </p>
+
+  </div>
+
+</section>
 
 <section class="news wrap" id="contact">
-  <div><h2>Restez inspiré·e</h2><p>Les nouveautés et les nouvelles collections directement dans votre boîte mail.</p></div>
-  <form class="form" onsubmit="event.preventDefault(); alert('Merci ! La newsletter sera bientôt connectée.');"><input type="email" placeholder="Votre adresse e-mail" required><button>S'inscrire</button></form>
+
+  <div>
+    <h2>Restez inspiré·e</h2>
+    <p>Les nouveautés et les nouvelles collections directement dans votre boîte mail.</p>
+  </div>
+
+  <form class="form" onsubmit="event.preventDefault(); alert('Merci ! La newsletter sera bientôt connectée.');">
+    <input type="email" placeholder="Votre adresse e-mail" required>
+    <button>S'inscrire</button>
+  </form>
+
 </section>
+
 </main>
 
-<footer class="wrap"><div>© EVdV — Illustrations</div><div>Instagram · Pinterest · Contact</div></footer>
-</body></html>
+<footer class="wrap">
+  <div>© EVdV — Illustrations</div>
+  <div>Instagram · Pinterest · Contact</div>
+</footer>
+
+</body>
+</html>
